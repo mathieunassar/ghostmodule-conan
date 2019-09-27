@@ -25,7 +25,7 @@ class GhostmoduleConan(ConanFile):
 
     def build(self):
         cmake = CMake(self)
-        cmake.configure(source_folder="ghostmodule")
+        cmake.configure(source_folder="ghostmodule", args=["-DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE"])
         cmake.build()
 
     def package(self):
