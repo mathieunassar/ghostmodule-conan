@@ -1,8 +1,8 @@
 environment:
-  - PYTHON_HOME: "C:\\Python37"
-  - CONAN_REFERENCE: "ghostmodule/1.2"
-  - CONAN_CHANNEL: "stable"
-  - CONAN_UPLOAD: "https://api.bintray.com/conan/mathieunassar/ghostrobotics"
+  PYTHON_HOME: "C:\\Python37"
+  CONAN_REFERENCE: "ghostmodule/1.2"
+  CONAN_CHANNEL: "stable"
+  CONAN_UPLOAD: "https://api.bintray.com/conan/mathieunassar/ghostrobotics"
 
   matrix:
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
