@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 2.8.12)
+project(PackageTest CXX)
+
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
+add_executable(module_minimum module_minimum.cpp)
+message(${CONAN_LIB_DIRS})
+target_link_libraries(module_minimum ${CONAN_LIBS})
