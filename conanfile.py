@@ -39,7 +39,7 @@ class GhostmoduleConan(ConanFile):
         self.copy("*.so", dst="lib", keep_path=False)
 
     def package_info(self):
-        if self.settings.os == "Windows" and self.settings.build_type == "Debug":
+        if self.settings.build_type == "Debug":
             self.cpp_info.libs = ["ghost_moduled", "ghost_persistenced"]
         else:
             self.cpp_info.libs = ["ghost_module", "ghost_persistence"]
