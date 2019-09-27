@@ -1,12 +1,4 @@
 
-env:
-   global:
-     - CONAN_REFERENCE: "ghostmodule/1.2"
-     - CONAN_USERNAME: "mathieunassar"
-     - CONAN_LOGIN_USERNAME: "mathieunassar"
-     - CONAN_CHANNEL: "stable"
-     - CONAN_UPLOAD: "https://api.bintray.com/conan/mathieunassar/ghostrobotics"
-
 linux: &linux
    os: linux
    dist: xenial
