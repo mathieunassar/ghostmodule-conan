@@ -27,7 +27,7 @@ https://github.com/mathieunassar/ghostmodule/issues
 The Conan recipe to add to your setup is the following:
 
 ```
-ghostmodule/1.2@mathieunassar/stable
+ghostmodule/1.3@mathieunassar/stable
 ```
 
 #### Add Remote

@@ -1,6 +1,6 @@
 environment:
   PYTHON_HOME: "C:\\Python37"
-  CONAN_REFERENCE: "ghostmodule/1.2"
+  CONAN_REFERENCE: "ghostmodule/1.3"
   CONAN_CHANNEL: "stable"
   CONAN_UPLOAD: "https://api.bintray.com/conan/mathieunassar/ghostrobotics"
 

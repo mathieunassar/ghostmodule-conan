@@ -3,7 +3,7 @@ from conans import ConanFile, CMake, tools
 
 class GhostmoduleConan(ConanFile):
     name = "ghostmodule"
-    version = "1.2"
+    version = "1.3"
     license = "Apache License 2.0"
     author = "Mathieu Nassar mathieu.nassar@gmail.com"
     url = "https://github.com/mathieunassar/ghostmodule"
@@ -16,12 +16,15 @@ class GhostmoduleConan(ConanFile):
 
     requires = (
         "protobuf/3.6.1@bincrafters/stable",
-        "protoc_installer/3.6.1@bincrafters/stable"
+        "protoc_installer/3.6.1@bincrafters/stable",
+        "grpc/1.20.0@inexorgame/stable",
+        "gtest/1.8.1@bincrafters/stable",
+        "boost_uuid/1.69.0@bincrafters/stable"
     )
 
     def source(self):
         git = tools.Git(folder="ghostmodule")
-        git.clone("https://github.com/mathieunassar/ghostmodule.git", "v1.2")
+        git.clone("https://github.com/mathieunassar/ghostmodule.git", "master")
 
     def build(self):
         cmake = CMake(self)
@@ -40,6 +43,6 @@ class GhostmoduleConan(ConanFile):
 
     def package_info(self):
         if self.settings.build_type == "Debug":
-            self.cpp_info.libs = ["ghost_moduled", "ghost_persistenced"]
+            self.cpp_info.libs = ["ghost_connection_extensiond", "ghost_moduled", "ghost_persistenced", "ghost_connection_grpcd", "ghost_connectiond"]
         else:
-            self.cpp_info.libs = ["ghost_module", "ghost_persistence"]
+            self.cpp_info.libs = ["ghost_connection_extension", "ghost_module", "ghost_persistence", "ghost_connection_grpc", "ghost_connection"]
