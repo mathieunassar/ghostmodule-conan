@@ -18,8 +18,7 @@ class GhostmoduleConan(ConanFile):
         "protobuf/3.6.1@bincrafters/stable",
         "protoc_installer/3.6.1@bincrafters/stable",
         "grpc/1.20.0@inexorgame/stable",
-        "gtest/1.8.1@bincrafters/stable",
-        "boost_uuid/1.69.0@bincrafters/stable"
+        "gtest/1.8.1@bincrafters/stable"
     )
 
     def source(self):
