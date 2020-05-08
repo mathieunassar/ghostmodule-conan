@@ -3,7 +3,7 @@ from conans import ConanFile, CMake, tools
 
 class GhostmoduleConan(ConanFile):
     name = "ghostmodule"
-    version = "1.3"
+    version = "1.4"
     license = "Apache License 2.0"
     author = "Mathieu Nassar mathieu.nassar@gmail.com"
     url = "https://github.com/mathieunassar/ghostmodule"
