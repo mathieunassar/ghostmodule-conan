@@ -23,7 +23,7 @@ class GhostmoduleConan(ConanFile):
 
     def source(self):
         git = tools.Git(folder="ghostmodule")
-        git.clone("https://github.com/mathieunassar/ghostmodule.git", "master")
+        git.clone("https://github.com/mathieunassar/ghostmodule.git", "dev/pre-1.4")
 
     def build(self):
         cmake = CMake(self)
