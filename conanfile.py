@@ -42,6 +42,6 @@ class GhostmoduleConan(ConanFile):
 
     def package_info(self):
         if self.settings.build_type == "Debug":
-            self.cpp_info.libs = ["ghost_connection_extensiond", "ghost_moduled", "ghost_persistenced", "ghost_connection_grpcd", "ghost_connectiond"]
+            self.cpp_info.libs = ["ghost_persistence_extensiond", "ghost_connection_extensiond", "ghost_moduled", "ghost_persistenced", "ghost_connection_grpcd", "ghost_connectiond"]
         else:
-            self.cpp_info.libs = ["ghost_connection_extension", "ghost_module", "ghost_persistence", "ghost_connection_grpc", "ghost_connection"]
+            self.cpp_info.libs = ["ghost_persistence_extension", "ghost_connection_extension", "ghost_module", "ghost_persistence", "ghost_connection_grpc", "ghost_connection"]
