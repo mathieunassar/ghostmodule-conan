@@ -5,6 +5,6 @@ set(CMAKE_CXX_FLAGS "-std=c++14")
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
-add_executable(connection_extension_daemon connection_extension_daemon.cpp)
+add_executable(ghost_module module_minimum.cpp)
 message(${CONAN_LIB_DIRS})
-target_link_libraries(connection_extension_daemon ${CONAN_LIBS})
+target_link_libraries(ghost_module ${CONAN_LIBS})

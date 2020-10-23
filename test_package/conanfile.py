@@ -22,4 +22,4 @@ class GhostmoduleTestConan(ConanFile):
     def test(self):
         if not tools.cross_building(self.settings):
             os.chdir("bin")
-            self.run(".%sconnection_extension_daemon" % os.sep)
+            self.run(".%sghost_module" % os.sep)
