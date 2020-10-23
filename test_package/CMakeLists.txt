@@ -5,6 +5,6 @@ set(CMAKE_CXX_FLAGS "-std=c++14")
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
-add_executable(ghost_module module_minimum.cpp)
+add_executable(ghostmodule module_minimum.cpp)
 message(${CONAN_LIB_DIRS})
-target_link_libraries(ghost_module ${CONAN_LIBS})
+target_link_libraries(ghostmodule ${CONAN_LIBS})
