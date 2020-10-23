@@ -105,7 +105,7 @@ public:
 			// Sets "config" as the configuration of the server listening to incoming remote control
 			// clients. Note: from that point, if the server is not available, the client program will fail
 			// to start.
-			module.getExtension<ghost::ConnectionExtension>()->setRemoteControl(config);
+			//module.getExtension<ghost::ConnectionExtension>()->setRemoteControl(config);
 		}
 
 		// The following two lines register an instance of the command defined previously.
@@ -120,7 +120,7 @@ public:
 	{
 		std::this_thread::sleep_for(std::chrono::seconds(1));
 
-		return true; // we will loop forever. Users can invoke the built-in "exit" command to leave the program.
+		return false; // This is the test package, we don't run anything
 	}
 };
 
