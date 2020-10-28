@@ -11,7 +11,7 @@ class GhostmoduleConan(ConanFile):
     topics = ("framework", "microservice", "command-line")
     settings = "os", "compiler", "build_type", "arch"
     options = {"shared": [True, False], "fPIC": [True, False]}
-    default_options = {"shared"=False, "fPIC"=True}
+    default_options = {"shared": False, "fPIC": True}
     generators = "cmake"
 
     requires = (
