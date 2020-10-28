@@ -10,14 +10,13 @@ class GhostmoduleConan(ConanFile):
     description = "Lightweight, multiplatform and accessible framework for command line-based programs and C++ microservices."
     topics = ("framework", "microservice", "command-line")
     settings = "os", "compiler", "build_type", "arch"
-    options = {"shared": [True, False]}
-    default_options = "shared=False"
+    options = {"shared": [True, False], "fPIC": [True, False]}
+    default_options = {"shared"=False, "fPIC"=True}
     generators = "cmake"
 
     requires = (
-        "protobuf/3.6.1@bincrafters/stable",
-        "protoc_installer/3.6.1@bincrafters/stable",
-        "grpc/1.20.0@inexorgame/stable",
+        "protobuf/3.9.1@bincrafters/stable",
+        "protoc_installer/3.9.1@bincrafters/stable",
         "gtest/1.8.1@bincrafters/stable"
     )
 
@@ -42,6 +41,6 @@ class GhostmoduleConan(ConanFile):
 
     def package_info(self):
         if self.settings.build_type == "Debug":
-            self.cpp_info.libs = ["ghost_persistence_extensiond", "ghost_connection_extensiond", "ghost_moduled", "ghost_persistenced", "ghost_connection_grpcd", "ghost_connectiond"]
+            self.cpp_info.libs = ["ghost_persistence_extensiond", "ghost_connection_extensiond", "ghost_moduled", "ghost_persistenced", "ghost_connectiond"]
         else:
-            self.cpp_info.libs = ["ghost_persistence_extension", "ghost_connection_extension", "ghost_module", "ghost_persistence", "ghost_connection_grpc", "ghost_connection"]
+            self.cpp_info.libs = ["ghost_persistence_extension", "ghost_connection_extension", "ghost_module", "ghost_persistence", "ghost_connection"]
